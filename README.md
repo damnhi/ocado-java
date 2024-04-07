@@ -15,9 +15,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 To build the project, navigate to the project directory and run the following command:
 
-\`\`\`bash
+```bash
 gradle build
-\`\`\`
+```
 
 This will compile the Java code, run the tests, and create a JAR file in the `build/libs` directory.
 
@@ -25,9 +25,9 @@ This will compile the Java code, run the tests, and create a JAR file in the `bu
 
 To create a shadow JAR, which includes all of the project's dependencies, use the following command:
 
-\`\`\`bash
+```bash
 ./gradlew shadowJar
-\`\`\`
+```
 
 This will create a JAR file in the `build/libs` directory that can be used to run the application on any machine with a compatible JVM.
 
@@ -35,10 +35,10 @@ This will create a JAR file in the `build/libs` directory that can be used to ru
 
 The `BasketSplitter` class is used by creating a new instance with the path to a configuration file. The `split` method can then be called with a list of items to split them into different delivery types.
 
-\`\`\`java
+```java
 BasketSplitter basketSplitter = new BasketSplitter("path/to/config.json");
 List<String> items = Arrays.asList("item1", "item2", "item3");
 Map<String, List<String>> result = basketSplitter.split(items);
-\`\`\`
+```
 
 The `split` method returns a map where the keys are the delivery types and the values are lists of items for each delivery type.
